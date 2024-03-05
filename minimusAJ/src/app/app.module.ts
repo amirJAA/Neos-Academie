@@ -3,20 +3,21 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MainContainerComponent } from './component/main-container/main-container.component';
-import { WeatherCardComponent } from './component/weather-card/weather-card.component';
-import { AddCardComponent } from './component/add-card/add-card.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { CitiesComponent } from './cities/cities.component';
+import { MainWeatherComponent } from './main-weather/main-weather.component';
+import { SocialMediaComponent } from './social-media/social-media.component';
+import { WeekWaetherComponent } from './week-waether/week-waether.component';
+import { WeatherDescriptionComponent } from './weather-description/weather-description.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainContainerComponent,
-    WeatherCardComponent,
-    AddCardComponent,
     NavbarComponent,
-    CitiesComponent
+    MainWeatherComponent,
+    SocialMediaComponent,
+    WeekWaetherComponent,
+    WeatherDescriptionComponent,
   ],
   imports: [
     BrowserModule,
