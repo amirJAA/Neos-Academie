@@ -12,6 +12,8 @@ import { WeatherService } from './services/wheather.service';
 import { HttpClientModule } from '@angular/common/http';
 import { WeatherDetailComponent } from './details-weather/weather-detail/weather-detail.component';
 import { HomeMainComponent } from './home/home-main/home-main.component';
+import { WeatherCardComponent } from './home/weather-card/weather-card.component';
+import { AddCardComponent } from './home/add-card/add-card.component';
 
 
 
@@ -25,6 +27,8 @@ import { HomeMainComponent } from './home/home-main/home-main.component';
     WeatherDescriptionComponent,
     WeatherDetailComponent,
     HomeMainComponent,
+    WeatherCardComponent,
+    AddCardComponent,
   ],
   imports: [
     BrowserModule,
