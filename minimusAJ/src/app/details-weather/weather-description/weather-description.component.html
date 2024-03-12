@@ -1,0 +1,9 @@
+<div class="twitter-feed flex p-6 bg-[#f1e5eb]">
+  <app-social-media class="flex-1 max-w-lg"></app-social-media>
+  <div class="w-1 bg-blue-500"></div>
+  <div class="flex flex-1 p-6 items-center">
+       <div *ngFor="let weather of weathers" class="flex-1">
+            <app-week-waether [weather]="weather" ></app-week-waether>
+       </div>
+  </div>
+</div>

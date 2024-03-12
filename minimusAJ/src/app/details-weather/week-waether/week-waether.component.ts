@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { WeatherParams } from '../../interface/weather-params';
 
 @Component({
   selector: 'app-week-waether',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./week-waether.component.scss']
 })
 export class WeekWaetherComponent {
+  @Input() weather!: WeatherParams;
 
 }

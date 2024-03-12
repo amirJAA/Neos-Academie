@@ -4,10 +4,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { MainWeatherComponent } from './main-weather/main-weather.component';
-import { SocialMediaComponent } from './social-media/social-media.component';
-import { WeekWaetherComponent } from './week-waether/week-waether.component';
-import { WeatherDescriptionComponent } from './weather-description/weather-description.component';
+import { MainWeatherComponent } from './details-weather/main-weather/main-weather.component';
+import { SocialMediaComponent } from './details-weather/social-media/social-media.component';
+import { WeekWaetherComponent } from './details-weather/week-waether/week-waether.component';
+import { WeatherDescriptionComponent } from './details-weather/weather-description/weather-description.component';
+import { WeatherService } from './services/wheather.service';
+import { HttpClientModule } from '@angular/common/http';
+import { WeatherDetailComponent } from './details-weather/weather-detail/weather-detail.component';
+
 
 
 @NgModule({
@@ -18,12 +22,15 @@ import { WeatherDescriptionComponent } from './weather-description/weather-descr
     SocialMediaComponent,
     WeekWaetherComponent,
     WeatherDescriptionComponent,
+    WeatherDetailComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
+
   ],
-  providers: [],
+  providers: [WeatherService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

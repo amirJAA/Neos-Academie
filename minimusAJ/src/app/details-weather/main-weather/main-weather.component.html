@@ -1,0 +1,24 @@
+<div class="weather-info font-sans p-6 flex text-white bg-[url('src\assets\france.svg')] min-h-80">
+  <div class="global-temperature flex-1 mt-8 text-center max-w-80">
+    <div class="temperature text-8xl">
+      {{ temperature }}°
+    </div>
+    <div class="weather-condition text-4xl">
+      {{ condition }}
+    </div>
+    <div class="weather-h-w flex text-2xl mt-6">
+      <div class="humidity flex-1 pl-8">
+        <div>Humidité</div>
+        <div>{{ humidity }}%</div>
+      </div>
+      <div class="w-px bg-white"></div>
+      <div class="wind flex-1 max-w-48">
+        <p>Vent</p>
+        <p>{{ wind }} km/h</p>
+      </div>
+    </div>
+  </div>
+  <div class="location flex-1 text-6xl text-right mr-24 underline">
+    {{ city }}
+  </div>
+</div>
