@@ -11,6 +11,7 @@ import { WeatherDescriptionComponent } from './details-weather/weather-descripti
 import { WeatherService } from './services/wheather.service';
 import { HttpClientModule } from '@angular/common/http';
 import { WeatherDetailComponent } from './details-weather/weather-detail/weather-detail.component';
+import { HomeMainComponent } from './home/home-main/home-main.component';
 
 
 
@@ -23,6 +24,7 @@ import { WeatherDetailComponent } from './details-weather/weather-detail/weather
     WeekWaetherComponent,
     WeatherDescriptionComponent,
     WeatherDetailComponent,
+    HomeMainComponent,
   ],
   imports: [
     BrowserModule,

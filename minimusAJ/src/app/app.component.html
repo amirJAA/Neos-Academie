@@ -1,12 +1,4 @@
 <div>
   <app-navbar></app-navbar>
-  <div class="flex p-4 bg-[url('src\assets\background.png')]">
-    <div class="flex-1 max-w-32">
-      <img src="..\assets\fleche-gauche.png" [routerLink]="" class="max-w-12 h-12 rounded-full flex-1">
-      <p class="text-white">BACK</p>
-    </div>
-    <div class="flex-1">
-      <router-outlet></router-outlet>
-    </div>
-  </div>
+  <router-outlet></router-outlet>
 </div>
