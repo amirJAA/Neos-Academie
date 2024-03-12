@@ -7,7 +7,7 @@ import { WeatherService } from 'src/app/services/wheather.service';
   styleUrls: ['./weather-card.component.scss']
 })
 export class WeatherCardComponent implements OnInit {
-  cities: string[] = ['Paris', 'London', 'New York'];
+  cities: string[] = ['Paris', 'London', 'New York', 'Tokyo'];
   weatherData: any[] = [];
 
   constructor(private weatherService: WeatherService) { }
@@ -35,6 +35,11 @@ export class WeatherCardComponent implements OnInit {
         cityWeatherData.condition = condition;
         this.weatherData.push(cityWeatherData);
       });
+
+      //recuperer le nom de la ville
+      cityWeatherData.city = city;
+
+
     });
   }
 }

@@ -1,42 +1,30 @@
 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-  <div *ngFor="let data of weatherData" class="weather__card cursor-pointer">
-    <span class="city-name__text text-xl font-bold">{{ data.city }}</span>
-    <div class="weather-icon__container" [ngSwitch]="true">
-      <div *ngSwitchCase="data.condition === 'Clouds'" class="text-gray-500">
-        <svg></svg>
-      </div>
-      <div *ngSwitchCase="data.condition === 'Rain' || data.condition === 'Drizzle'" class="text-blue-500">
-        <svg></svg>
-      </div>
-      <div *ngSwitchCase="data.condition === 'Storm'" class="text-gray-800">
-        <svg></svg>
-      </div>
-      <div *ngSwitchCase="data.condition === 'Sunny' || data.condition === 'Clear'" class="text-yellow-500">
-        <svg></svg>
-      </div>
-      <div *ngSwitchCase="data.condition === 'Fog'" class="text-gray-400">
-        <svg></svg>
-      </div>
+  <div *ngFor="let data of weatherData" class="grid place-items-center p-8 bg-white shadow-xl rounded-xl">
+    <span class="text-xl font-bold">{{ data.city }}</span>
+    <div class="mt-4">
+      <svg *ngIf="data.condition === 'Clouds'" class="text-gray-500 w-20 h-20"></svg>
+      <svg *ngIf="data.condition === 'Rain' || data.condition === 'Drizzle'" class="text-blue-500 w-20 h-20"></svg>
+      <svg *ngIf="data.condition === 'Storm'" class="text-gray-800 w-20 h-20"></svg>
+      <svg *ngIf="data.condition === 'Sunny' || data.condition === 'Clear'" class="text-yellow-500 w-20 h-20"></svg>
+      <svg *ngIf="data.condition === 'Fog'" class="text-gray-400 w-20 h-20"></svg>
     </div>
-    <div class="temperature-text__container">
-      <span class="temperature__text text-4xl">{{ data.currentTemp }}</span>
-      <span class="temperature-metric__text text-2xl">°</span>
-      <span class="weather-condition__text">{{ data.condition }}</span>
-    </div>
-    <div class="min-max__container flex justify-between">
-      <div class="min__container flex items-center">
-        <svg class="min-arrow__icon h-6 w-6 text-green-500" viewBox="0 0 20 20">
+    <div class="text-4xl">{{ data.currentTemp }}</div>
+    <div class="text-2xl">°</div>
+    <div class="text-sm text-center">{{ data.condition }}</div>
+    <div class="flex justify-between mt-4 w-full">
+      <div class="flex items-center">
+        <svg class="h-6 w-6 text-green-500" viewBox="0 0 20 20">
           <path fill="#00ff9b" d="M15 11H5l5-9z"></path>
         </svg>
-        <span class="min-temperature__text text-lg">{{ data.minTemp }}</span>
-        <span class="min__text text-gray-600">Min</span>
+        <span class="text-lg">{{ data.minTemp }}</span>
+        <span class="text-gray-600">Min</span>
       </div>
-      <div class="max__container flex items-center">
-        <svg class="max-arrow__icon h-6 w-6 text-red-500" viewBox="0 0 20 20">
+      <div class="flex items-center">
+        <svg class="h-6 w-6 text-red-500" viewBox="0 0 20 20">
           <path fill="red" d="M5 11h10l-5-9z"></path>
         </svg>
-        <span class="max-temperature__text text-lg">{{ data.maxTemp }}</span>
-        <span class="max__text text-gray-600">Max</span>
+        <span class="text-lg">{{ data.maxTemp }}</span>
+        <span class="text-gray-600">Max</span>
       </div>
     </div>
   </div>
